@@ -2,21 +2,29 @@ body {
     margin-top: 50px;
     margin-left: 100px;
     }
-   
-  h1 {
+
+  h1 , h2 , h3 , h4 , h5 , h6 {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 2.5em;
-    color: rgb(115, 0, 255);
+    color: rgb(0, 199, 202);
     }
    
   p {
-    font-family: Georgia, serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-size: 1.2em;
-    color: DarkSlateGray;
+    color: rgb(154, 222, 95);
     }
 
 #center {
 
   text-align: center;
       
+}
+
+#center img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
