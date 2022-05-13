@@ -1,0 +1,42 @@
+import os
+
+CSS_DIR = 'static/css'
+JS_DIR = 'static/js'
+
+CSS = []
+JS = []
+
+HTML_PART_ONE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html</title>
+</head>
+"""
+
+HTLM_PART_TWO = """
+</html>
+"""
+
+for dirname, _, filenames in os.walk(CSS_DIR):
+    for filename in filenames:
+        if filename.endswith('.css'):
+            CSS.append('<link rel="stylesheet" href="{}/{}">'.format(dirname, filename))
+
+for dirname, _, filenames in os.walk(JS_DIR):
+    for filename in filenames:
+        if filename.endswith('.js'):
+            JS.append('<script src="{}/{}"></script>'.format(dirname, filename))
+
+with open('output.html', 'w') as f:
+    f.write(HTML_PART_ONE)
+    for css in CSS:
+        f.write(css)
+        f.write('\n')
+    for js in JS:
+        f.write(js)
+        f.write('\n')
+    f.write(HTLM_PART_TWO)
