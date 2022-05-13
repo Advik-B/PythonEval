@@ -1,0 +1,19 @@
+* {
+    background-color: rgb(24, 0, 53);
+  }
+  @media screen and (prefers-color-scheme: light) {
+    body {
+      background-color: white;
+      color: black;
+    }
+    img {
+        opacity: .75;
+        transition: opacity .5s ease-in-out;
+      }
+    
+    img:hover {
+        opacity: 1;
+      }
+    
+  }
+ 
